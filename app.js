@@ -12,6 +12,7 @@ var judges = require('./routes/judges');
 var participants = require('./routes/participants');
 var contact = require('./routes/contact');
 var about = require('./routes/about');
+var organizer = require('./routes/organizer');
 
 var app = express();
 
@@ -34,7 +35,7 @@ app.use('/judges', judges);
 app.use('/participants', participants);
 app.use('/contact', contact);
 app.use('/about', about);
-
+app.use('/create',organizer);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
